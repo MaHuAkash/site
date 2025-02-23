@@ -1,0 +1,150 @@
+/* globals.css */
+
+/* Base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Root variables */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --radius: 0.5rem;
+    --container-padding: 1rem;
+    --accent-500: rgb(84, 37, 145);
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite ease-in-out;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+/* Apply global base styles */
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Make sure everything is responsive */
+  html {
+    font-size: 100%;
+  }
+
+
+
+
+  
+
+  /* Container with padding and max-width */
+  .container {
+    @apply px-4 mx-auto max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl xl:max-w-7xl;
+  }
+
+  /* Basic styles for headings and paragraphs */
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* Add responsive layout to elements by default */
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Add responsive font sizes for text */
+@layer base {
+  .text-sm {
+    font-size: 0.875rem; /* 14px */
+  }
+
+  .text-base {
+    font-size: 1rem; /* 16px */
+  }
+
+  .text-lg {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  .text-xl {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  /* Apply responsive text sizing based on screen size */
+  @media (min-width: 640px) {
+    .text-sm { font-size: 1rem; } /* 16px for small devices */
+    .text-base { font-size: 1.125rem; } /* 18px for medium screens */
+    .text-lg { font-size: 1.25rem; } /* 20px for tablets */
+  }
+
+  @media (min-width: 1024px) {
+    .text-lg { font-size: 1.5rem; } /* 24px for larger screens */
+    .text-xl { font-size: 2rem; } /* 32px for large desktops */
+  }
+}
