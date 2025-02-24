@@ -20,6 +20,7 @@ import {
 } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
 
+
 const colorConfig = {
   midnightPurple: {
     gradient: 'from-gray-900 via-purple-900/80 to-gray-900',
@@ -39,38 +40,32 @@ const skills = [
     title: "Frontend Architecture",
     description: "React, Next.js, TypeScript, Framer Motion",
     icon: CodeBracketIcon,
-    tech: "/pics/doler/a.jpg"
-  },
+    tech: `${process.env.NEXT_PUBLIC_BASE_URL}/pics/doler/a.jpg`  },
   {
     title: "Backend Systems",
     description: "ASP.NET Core, REST APIs, Microservices",
     icon: ServerIcon,
-    tech: "/pics/doler/a.jpg"
-  },
+    tech: `${process.env.NEXT_PUBLIC_BASE_URL}/pics/doler/a.jpg`  },
   {
     title: "Database Design",
     description: "SQL, EF Core, Query Optimization",
     icon: CircleStackIcon,
-    tech: "/pics/doler/a.jpg"
-  },
+    tech: `${process.env.NEXT_PUBLIC_BASE_URL}/pics/doler/a.jpg`  },
   {
     title: "Cloud & DevOps",
     description: "Azure, CI/CD, Docker, Cloud Patterns",
     icon: CloudIcon,
-    tech: "/pics/doler/a.jpg"
-  },
+    tech: `${process.env.NEXT_PUBLIC_BASE_URL}/pics/doler/a.jpg`  },
   {
     title: "Architecture Patterns",
     description: "DDD, MVC, SOLID, Clean Architecture",
     icon: CubeIcon,
-    tech: "/pics/doler/a.jpg"
-  },
+    tech: `${process.env.NEXT_PUBLIC_BASE_URL}/pics/doler/a.jpg`  },
   {
     title: "Tooling & Practices",
     description: "Git, Agile, TDD, Performance Tuning",
     icon: WrenchScrewdriverIcon,
-    tech: "/pics/doler/a.jpg"
-  }
+    tech: `${process.env.NEXT_PUBLIC_BASE_URL}/pics/doler/a.jpg`  }
 ];
 
 interface TimelineEntry {

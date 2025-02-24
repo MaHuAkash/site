@@ -1,7 +1,8 @@
-'use client'
+'use client';
 import { motion } from 'framer-motion'
 import { ParticleBackground } from '../../components/acernityui/ParticleBackground'
 import { FiMail, FiGithub, FiLinkedin, FiSend, FiMessageSquare } from 'react-icons/fi'
+
 
 const colorConfig = {
   midnightPurple: {

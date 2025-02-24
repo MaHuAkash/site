@@ -1,5 +1,5 @@
 const nextConfig = {
-  // Remove "output: 'export'" for server-side rendering
+  output: 'export',
   trailingSlash: true,
   images: {
     unoptimized: true,
