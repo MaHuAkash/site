@@ -1,5 +1,5 @@
 import { FloatingDock } from "../components/acernityui/floating-dock"; // Update with your actual path
-import { Home, User, Mail } from "tabler-icons-react";
+import { Home, User, Mail, Briefcase } from "tabler-icons-react";
 
 export const Navbar = () => {
   const navItems = [
@@ -17,6 +17,11 @@ export const Navbar = () => {
       title: "Contact",
       icon: <Mail className="stroke-current" />,
       href: "/contact",
+    },
+    {
+      title: "Blog",
+      icon: <Briefcase className="stroke-current" />,
+      href: "https://blog.aakashlamsal.com.np",
     },
   ];
 
